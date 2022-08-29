@@ -32,53 +32,84 @@ body{
     background: radial-gradient(ellipse at right bottom, #111119 0%, #434343 100%);
 }*/
 
-.navbar{
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    transition: 0.6s;
+    padding: 0 89px;
+    padding-left: 150px;
+    z-index: 10000;
 }
 
-body::after{
-    content: '';
-    width: 100%;
-    height: 1px;
-    background: white;
-    position: absolute;
-    top: 89px;
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 300px;
 }
 
-.logo{
-    width: 120px;
-    cursor: pointer;
-    margin: 30px 0;
-}
-
-.menu-icon{
-    width: 25px;
-    cursor: pointer;
-}
-
-nav{
-    flex: 1;
-    text-align: right;
-}
-
-nav ul li{
+header ul li{
+    position: relative;
     list-style: none;
     display: inline-block;
     margin-right: 30px;
 }
 
-nav ul li a{
-    font-family: 'Impograpiko';
+header ul li a{
+    color: #ffffff !important;
+    position: relative;
+    margin: 0 15px;
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    transition: 0.5s;
+    font-family: 'Impograpiko';
     font-size: 14px;
+    font-weight: normal;
 }
 
-nav ul li a:hover{
+header ul li a:hover{
+    color: #a3a3a3 !important;
+    transition: all 0.5s ease 0s;
+}
+
+header.sticky{
+    background: #1f1f1f;
+}
+
+header.sticky ul li a{
+    color:rgb(255, 255, 255);
+}
+
+header.sticky ul li a:hover{
     color: #a3a3a3;
     transition: all 0.5s ease 0s;
+}
+
+/*header::after{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: white;
+    position: absolute;
+    top: 99px;
+}*/
+
+.logo{
+    width: 120px;
+    cursor: pointer;
+    margin: 30px 0;
+    
+}
+
+.menu-icon{
+    display: none;
+    width: 25px;
+    cursor: pointer;
 }
 
 .row{
@@ -180,6 +211,19 @@ svg{
 }
 
 @media only screen and (max-width:700px){
+    .menu-icon{
+        display: block;
+
+    }
+    header ul{
+        margin: -240px;
+    }
+    header ul li a{
+        display: none;
+    }
+    header{
+        padding: 0 25px;
+    }
     .row{
         flex-direction: column-reverse;
         margin: 50px 0;
@@ -204,6 +248,9 @@ svg{
     }
     .social-links{
         justify-content: center;
+    }
+    .footer{
+        font-size: 13px;
     }
 }
 
