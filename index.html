@@ -5,26 +5,26 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home - Impograpiko</title>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" type="image/png" href="images/favicon.png">
     </head>
     <body>
         <section>
             <div class="container">
-                <div class="navbar">
-                    <img src="images/impograpiko.png" class="logo" alt="Impograpiko">
-                    <nav>
-                        <ul>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                        </ul>
-                    </nav>
-                    <img src="images/menu.svg" class="menu-icon">
-                </div>
+                <header>
+                    <a href="#"><img src="images/impograpiko.png" class="logo" alt="Impograpiko"></a>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Youtube</a></li>
+                        <li><a href="">Contact</a></li>
+                        <img src="images/menu.svg" class="menu-icon">
+                    </ul>
+                </header>
     
                 <div class="row">
-                    <div class="col-1">
-                        <h1>⚠️🛠️</h1>
+                    <div class="col-1" data-aos="zoom-out" data-aos-duration="1000">
+                        <h1>⚠️​🛠️​​</h1>
                         <h2>Website under construction</h2>
                         <h3>In the meantime, please watch our<br>latest video</h3>
                         <div class="social-links-header">Follow Impograpiko</div>
@@ -54,12 +54,22 @@
                     </div>
                 </div>
                 <div class="col-2">
-                    <iframe class="video" width="615" height="346" src="https://www.youtube.com/embed/CbH2F0kXgTY" frameborder="0" allow="autoplay;encrypted-media" allowfullscreen></iframe>
+                    <iframe class="video" width="615" height="346" src="https://www.youtube.com/embed/tgbNymZ7vqY" frameborder="0" allow="autoplay;encrypted-media" data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" data-aos-delay="1500" allowfullscreen></iframe>
                 </div>
             </div>
             <div class="footer">
                 website hosted on github. made with ❤️ by <a href="https://github.com/biencarlo" target="_blank">biencarlo</a>.
             </div>
         </section>
+        <script type="text/javascript">
+            window.addEventListener("scroll", function(){
+                var header = document.querySelector("header");
+                header.classList.toggle("sticky", window.scrollY > 0)
+            })
+        </script>
+            <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
     </body>
 </html>
